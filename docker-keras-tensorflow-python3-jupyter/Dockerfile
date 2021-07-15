@@ -9,7 +9,7 @@ RUN rm Miniconda3-latest-Linux-x86_64.sh
 ENV PATH /root/miniconda3/bin:$PATH
 
 # Install keras using conda instead of pip to bypass AVX requirement on older CPUs
-RUN conda install keras
+RUN conda install keras-gpu
 
 RUN apt-get update && apt-get install -y \
 		libblas-dev \
